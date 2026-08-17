@@ -34,14 +34,4 @@ Here is your password: hKkC&8uK1Fu2bYG
 * User input
 * String joining with `.join()`
 
-## Requirements
-
-* Python 3
-
-## Run the Project
-
-```bash
-python main.py
-```
-
 This project is part of my Python learning journey.
