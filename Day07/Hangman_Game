@@ -1,0 +1,145 @@
+import random
+
+# Hangman stages
+stages = [
+    '''
+       +---+
+       |   |
+           |
+           |
+           |
+           |
+    =========
+    ''',
+    '''
+       +---+
+       |   |
+       O   |
+           |
+           |
+           |
+    =========
+    ''',
+    '''
+       +---+
+       |   |
+       O   |
+       |   |
+           |
+           |
+    =========
+    ''',
+    '''
+       +---+
+       |   |
+       O   |
+      /|   |
+           |
+           |
+    =========
+    ''',
+    '''
+       +---+
+       |   |
+       O   |
+      /|\\  |
+           |
+           |
+    =========
+    ''',
+    '''
+       +---+
+       |   |
+       O   |
+      /|\\  |
+      /    |
+           |
+    =========
+    ''',
+    '''
+       +---+
+       |   |
+       O   |
+      /|\\  |
+      / \\  |
+           |
+    =========
+    '''
+]
+
+# List of words
+word_list = [
+    "apple",
+    "banana",
+    "computer",
+    "python",
+    "programming",
+    "keyboard",
+    "developer",
+    "internet",
+    "elephant",
+    "tiger"
+]
+
+# Choose a random word
+chosen_word = random.choice(word_list)
+
+# Create blanks
+display = []
+for letter in chosen_word:
+    display.append("_")
+
+lives = 6
+guessed_letters = []
+
+print("Welcome to Hangman!")
+print("Guess the word one letter at a time.")
+print(stages[0])
+
+game_over = False
+
+while not game_over:
+
+    print("\nWord:", " ".join(display))
+    print(f"Lives remaining: {lives}")
+
+    guess = input("Guess a letter: ").lower()
+
+    # Check if the user entered a single letter
+    if len(guess) != 1 or not guess.isalpha():
+        print("Please enter only one letter.")
+        continue
+
+    # Check if letter was already guessed
+    if guess in guessed_letters:
+        print(f"You already guessed '{guess}'.")
+        continue
+
+    guessed_letters.append(guess)
+
+    # Check the guessed letter
+    if guess in chosen_word:
+        print("Good guess!")
+
+        for position in range(len(chosen_word)):
+            if chosen_word[position] == guess:
+                display[position] = guess
+
+    else:
+        lives -= 1
+        print(f"Sorry, '{guess}' is not in the word.")
+
+    # Display Hangman
+    print(stages[6 - lives])
+
+    # Check if player won
+    if "_" not in display:
+        game_over = True
+        print("\nYou win!")
+        print(f"The word was: {chosen_word}")
+
+    # Check if player lost
+    if lives == 0:
+        game_over = True
+        print("\nYou lose!")
+        print(f"The word was: {chosen_word}")
