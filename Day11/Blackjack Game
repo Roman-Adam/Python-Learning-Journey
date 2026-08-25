@@ -1,0 +1,93 @@
+import random
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+
+def deal_card():
+    """Returns a random card from the deck."""
+    return random.choice(cards)
+
+
+def calculate_score(hand):
+    """Calculates the score of a hand."""
+    score = sum(hand)
+
+    # If there is an Ace and the score is over 21,
+    # count the Ace as 1 instead of 11.
+    if 11 in hand and score > 21:
+        hand.remove(11)
+        hand.append(1)
+        score = sum(hand)
+
+    return score
+
+
+def compare(user_score, computer_score):
+    """Compares the scores and determines the winner."""
+
+    if user_score == computer_score:
+        return "Draw!"
+
+    if computer_score == 21:
+        return "You lose! Computer has Blackjack."
+
+    if user_score == 21:
+        return "You win with a Blackjack!"
+
+    if user_score > 21:
+        return "You went over. You lose!"
+
+    if computer_score > 21:
+        return "Computer went over. You win!"
+
+    if user_score > computer_score:
+        return "You win!"
+
+    return "You lose!"
+
+
+def play_game():
+    user_cards = []
+    computer_cards = []
+
+    # Deal two cards to the player and computer
+    for _ in range(2):
+        user_cards.append(deal_card())
+        computer_cards.append(deal_card())
+
+    game_over = False
+
+    while not game_over:
+
+        user_score = calculate_score(user_cards)
+        computer_score = calculate_score(computer_cards)
+
+        print(f"\nYour cards: {user_cards}, current score: {user_score}")
+        print(f"Computer's first card: {computer_cards[0]}")
+
+        # Check for Blackjack or bust
+        if user_score == 21 or computer_score == 21 or user_score > 21:
+            game_over = True
+        else:
+            should_continue = input(
+                "Type 'y' to get another card, or 'n' to pass: "
+            ).lower()
+
+            if should_continue == "y":
+                user_cards.append(deal_card())
+            else:
+                game_over = True
+
+    # Computer draws cards until score reaches at least 17
+    while computer_score < 17 and user_score <= 21:
+        computer_cards.append(deal_card())
+        computer_score = calculate_score(computer_cards)
+
+    print(f"\nYour final hand: {user_cards}, final score: {user_score}")
+    print(f"Computer's final hand: {computer_cards}, final score: {computer_score}")
+
+    print(compare(user_score, computer_score))
+
+
+while input("\nDo you want to play a game of Blackjack? Type 'y' or 'n': ").lower() == "y":
+    play_game()
