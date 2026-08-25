@@ -1,131 +1,86 @@
 # Python Learning Journey
 
-This repository contains my daily Python projects and learning progress as I work through the **100 Days of Python** course.
+Welcome to my Python Learning Journey!
 
-| Day | Topics | Project |
+I am learning Python step by step by building projects and practicing different Python concepts every day.
+
+This repository contains my daily Python projects and practice work.
+
+---
+
+## My Learning Progress
+
+| Day | Topics Learned | Project |
 |---|---|---|
-| Day 1 | Printing, Comments, Debugging, String Manipulation, Variables | Band Name Generator |
-| Day 2 | Data Types, Numbers, Operations, Type Conversion, f-Strings | Python Practice |
-| Day 2 | Data Types, Numbers, Operations, Type Conversion, f-Strings | Tip Calculator |
-| Day 3 | Conditional Statements, Logical Operators, Code Blocks, Scope | Treasure Island |
-| Day 4 | Randomization, Python Lists, List Indexing, Random Module | Rock Paper Scissors |
-| Day 5 | Python Loops, Randomization, Lists, String Manipulation | PyPassword Generator |
-| Day 6 | Functions, Code Blocks, While Loops, Conditional Statements | Karel the Robot |
-| Day 7 | Functions, Loops, Strings, Lists, Randomization, Game Logic | Hangman Game |
-| Day 8 | Functions, Loops, Lists, Strings, Encryption, Modulo Operator | Caesar Cipher |
+| Day 01 | Printing, Variables, Data Types, Input, String Manipulation | Band Name Generator |
+| Day 02 | Data Types, Mathematical Operations, Number Manipulation | Tip Calculator |
+| Day 03 | Conditional Statements, Logical Operators, Comparison Operators | Treasure Island |
+| Day 04 | Randomisation, Python Lists | Rock Paper Scissors |
+| Day 05 | For Loops, Range, Code Blocks | PyPassword Generator |
+| Day 06 | Functions, While Loops, Reeborg's World | Karel the Robot |
+| Day 07 | Functions, Loops, Conditional Statements, Strings | Hangman |
+| Day 08 | Functions, Loops, Conditional Statements, Lists, Strings | Caesar Cipher |
+| Day 09 | Dictionaries, Functions, Loops, Conditional Statements, User Input | Blind Auction |
+| Day 10 | Functions with Outputs, Return Values, Dictionaries, Recursion | Calculator |
+| Day 11 | Functions, Lists, Loops, Random Module, Game Logic | Blackjack |
+
+---
 
 ## Projects
 
-### Day 1 - Band Name Generator
+### Day 01 - Band Name Generator
+A simple program that generates a band name using the user's city and pet name.
 
-A simple Python program that creates a band name using the user's city and pet name.
+### Day 02 - Tip Calculator
+A calculator that determines how much each person should pay after adding a tip.
 
-### Day 2 - Python Fundamentals
+### Day 03 - Treasure Island
+A text-based adventure game where the player makes choices to find the treasure.
 
-Practiced data types, numbers, mathematical operations, type conversion, and f-strings.
+### Day 04 - Rock Paper Scissors
+A game where the player competes against the computer in Rock Paper Scissors.
 
-### Day 2 - Tip Calculator
+### Day 05 - PyPassword Generator
+A random password generator using letters, numbers, and symbols.
 
-A Python program that calculates the total bill, tip amount, and amount each person should pay.
+### Day 06 - Karel the Robot
+Programming challenges using functions and loops in Reeborg's World.
 
-### Day 3 - Treasure Island
+### Day 07 - Hangman
+A word-guessing game where the player tries to guess a hidden word.
 
-A text-based adventure game where the player makes different choices and gets different results.
+### Day 08 - Caesar Cipher
+A program that encrypts and decrypts messages using the Caesar Cipher technique.
 
-### Day 4 - Rock Paper Scissors
+### Day 09 - Blind Auction
+A program that collects secret bids and determines the bidder with the highest bid.
 
-A simple Rock Paper Scissors game where the player competes against the computer using random choices.
+### Day 10 - Calculator
+A calculator that performs mathematical operations and allows continued calculations.
 
-### Day 5 - PyPassword Generator
+### Day 11 - Blackjack
+A command-line Blackjack game where the player competes against the computer.
 
-A Python program that generates a random password.
+---
 
-The program asks the user how many letters, symbols, and numbers they want in the password. It then randomly selects the characters and shuffles them to create a password.
+## Progress
 
-### Day 6 - Karel the Robot
+- Day 01 Completed
+- Day 02 Completed
+- Day 03 Completed
+- Day 04 Completed
+- Day 05 Completed
+- Day 06 Completed
+- Day 07 Completed
+- Day 08 Completed
+- Day 09 Completed
+- Day 10 Completed
+- Day 11 Completed
 
-For the Day 06 final project, I used Karel the Robot to solve a maze/hurdle challenge.
+---
 
-The goal was to make the robot navigate through the maze and reach the finish point.
+## Goal
 
-I used the right-hand rule, where the robot checks whether the right side is clear and moves accordingly.
+My goal is to continue learning Python, build more projects, improve my problem-solving skills, and become a better programmer.
 
-### Day 7 - Hangman Game
-
-A classic Hangman game built using Python.
-
-The player has to guess the hidden word one letter at a time before running out of attempts.
-
-The project uses functions, loops, strings, lists, conditional statements, random word selection, and game logic.
-
-### Day 8 - Caesar Cipher
-
-A Python program that allows the user to encode and decode messages using the Caesar Cipher technique.
-
-The program shifts each letter by a specific number of positions in the alphabet. It can also shift the letters backward to decrypt the message.
-
-## Learning Progress
-
-- Day 1 - Completed
-- Day 2 - Completed
-- Day 3 - Completed
-- Day 4 - Completed
-- Day 5 - Completed
-- Day 6 - Completed
-- Day 7 - Completed
-- Day 8 - Completed
-
-## What I Learned
-
-### Day 5
-
-- `random.choice()`
-- `random.shuffle()`
-- `for` loops
-- Lists and strings
-- User input
-- String joining with `.join()`
-
-### Day 6
-
-- Functions
-- Code blocks
-- Indentation
-- While loops
-- Conditional statements
-- Problem-solving with loops and functions
-- Breaking a problem into smaller steps
-
-### Day 7
-
-- Creating and using functions
-- While loops
-- Strings and lists
-- Conditional statements
-- User input
-- Random word selection
-- Game logic
-- Problem-solving
-
-### Day 8
-
-- Creating and using functions
-- For and while loops
-- Strings and lists
-- Conditional statements
-- User input
-- List indexing
-- The `.index()` method
-- The modulo `%` operator
-- Encryption and decryption
-- Building reusable program logic
-
-## My Learning Process
-
-I am learning Python one day at a time by studying new concepts and building a project to practice what I have learned.
-
-I will continue adding my Python projects and learning progress to this repository.
-
-## 100 Days of Python Learning
-
-One day at a time, one project at a time.
+**Keep Learning. Keep Growing.**
