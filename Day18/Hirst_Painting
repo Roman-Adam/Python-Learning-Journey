@@ -1,0 +1,37 @@
+import turtle as t
+from turtle import Screen
+import random
+
+tim = t.Turtle()
+tim.speed("fastest")
+tim.penup()
+
+color_list = [
+    "red",
+    "blue",
+    "green",
+    "yellow",
+    "orange",
+    "pink",
+    "purple",
+    "brown",
+    "lightblue"
+]
+
+tim.setheading(225)
+tim.forward(300)
+tim.setheading(0)
+
+for row in range(10):
+    for col in range(10):
+        tim.dot(20, random.choice(color_list))
+        tim.forward(50)
+
+    tim.setheading(90)
+    tim.forward(50)
+    tim.setheading(180)
+    tim.forward(500)
+    tim.setheading(0)
+
+screen = t.Screen()
+screen.exitonclick()
